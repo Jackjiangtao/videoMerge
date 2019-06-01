@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "videoHebing", "videoHebing.pyproj", "{DF1F18D6-C410-4D3F-8D4A-E2382101614F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF1F18D6-C410-4D3F-8D4A-E2382101614F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1F18D6-C410-4D3F-8D4A-E2382101614F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C148BF64-EB29-484E-80A5-E8A788EFAEBD}
+	EndGlobalSection
+EndGlobal
