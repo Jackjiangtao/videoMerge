@@ -19,14 +19,17 @@ def downloadFile(url,mp4Name):
 
 
 def get_url(url):
+        num=1
         headers ={'user-agent':'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Mobile Safari/537.36'}
         req = requests.get(url, headers=headers)
         data = req.json()
         data = data['aweme_list']
         for info in  data:
                shareurl =info['aweme_info']['video']['play_addr']['url_list'][0]
-               mp4Name ='./video/'+ info['aweme_info']['desc']+".mp4"
-               mp4Name=mp4Name.replace("#","")
+               mp4Name ='./video/'+str(num)  +".mp4"
+               num=num+1
+               #mp4Name ='./video/'+ info['aweme_info']['desc']+".mp4"
+               #mp4Name=mp4Name.replace("#","")
                downloadFile(shareurl,mp4Name)
 
 

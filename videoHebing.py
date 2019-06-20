@@ -6,7 +6,7 @@ import douyin
 
 
 
-#   douyin.get_url("https://aweme.snssdk.com/aweme/v1/hotsearch/aweme/billboard/")
+douyin.get_url("https://aweme.snssdk.com/aweme/v1/hotsearch/aweme/billboard/")
 # 定义一个数组
 L = []
 
@@ -16,6 +16,18 @@ time =0
 for root, dirs, files in os.walk("./video"):
     # 按文件名排序
     files.sort()
+    for file in files:
+        if os.path.splitext(file)[1] == '.mkv':
+            # 拼接成完整路径
+            filePath = os.path.join(root, file)
+            # 载入视频
+            video = VideoFileClip(filePath)
+            video=video.set_start(0).crossfadein(1)
+            video=video.set_pos("center")
+            time= int(video.duration)
+            # 添加到数组
+            L.append(video)
+
     # 遍历所有文件
     for file in files:
         # 如果后缀名为 .mp4
@@ -29,17 +41,8 @@ for root, dirs, files in os.walk("./video"):
             video=video.set_pos("center")
             # 添加到数组
             L.append(video)
-            
-        if os.path.splitext(file)[1] == '.mkv':
-            # 拼接成完整路径
-            filePath = os.path.join(root, file)
-            # 载入视频
-            video = VideoFileClip(filePath)
-            video=video.set_start(0).crossfadein(1)
-            video=video.set_pos("center")
-            time= int(video.duration)
-            # 添加到数组
-            L.append(video)
+
+
 
 
 # 拼接视频
